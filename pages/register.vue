@@ -10,7 +10,7 @@
             <validation-observer ref="obs" v-slot="ObserverProps">
                 <div class="content-name">
                     <validation-provider v-slot="ProviderProps" rules="required|max:20">
-                        <input class="content-input" type="text" v-model="name" name="name" placeholder="ユーザーネーム" />
+                        <input class="content-input" type="text" v-model="name" name="ユーザーネーム" placeholder="ユーザーネーム" />
                         <div class="error">
                             {{ ProviderProps.errors[0] }}
                         </div>
@@ -80,3 +80,33 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.register-content {
+    width: 35%;
+    background-color: #fff;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.content-input {
+    width: 100%;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 0.7rem 0.5rem;
+}
+
+.button-click {
+    color: #fff;
+    background-color: #5100ff;
+    border-radius: 3rem;
+    font-size: large;
+    padding: 0.5rem 1.5rem;
+}
+
+.error {
+    color: #ff2d2d;
+}
+</style>

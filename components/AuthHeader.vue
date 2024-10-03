@@ -9,3 +9,27 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.title {
+    width: 10%;
+}
+
+.link-register,
+.link-login {
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+}
+
+.link-register {
+    margin-right: 1rem;
+}
+</style>

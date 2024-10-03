@@ -65,3 +65,29 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.login-content {
+    width: 35%;
+    background-color: #fff;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.content-input {
+    width: 100%;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 0.7rem 0.5rem;
+}
+
+.button-click {
+    color: #fff;
+    background-color: #5100ff;
+    border-radius: 3rem;
+    font-size: large;
+    padding: 0.5rem 1.5rem;
+}
+</style>
