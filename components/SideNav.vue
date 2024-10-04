@@ -4,7 +4,7 @@
             <img class="title-logo" :src="require('@/assets/images/logo.png')" alt="ロゴ" />
         </div>
         <div class="nav-link">
-            <NuxtLink>
+            <NuxtLink to="/">
                 <img class="nav-icon" :src="require('@/assets/images/home.png')" alt="ホーム" />
                 <p class="nav-name">ホーム</p>
             </NuxtLink>
