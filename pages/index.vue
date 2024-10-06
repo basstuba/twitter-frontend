@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <div class="side-nav">
+    <div class="main__side-nav">
       <SideNav @shared="addPost" />
     </div>
     <div class="main">
@@ -54,14 +54,14 @@ export default {
       const findLike = post.likes.find((like) => like.user_id === this.uid);
       await this.$axios.delete(`http://localhost/api/v1/like/${findLike.id}`);
 
-      const findLikeIdx = post.likes.findindex((like) => like.id === findLike.id);
+      const findLikeIdx = post.likes.findIndex((like) => like.id === findLike.id);
       post.likes.splice(findLikeIdx, 1);
     },
 
     async deletePost(event) {
       await this.$axios.delete(`http://localhost/api/v1/post/${event.id}`);
 
-      const findPostIdx = this.posts.findindex((post) => post.id === event.id);
+      const findPostIdx = this.posts.findIndex((post) => post.id === event.id);
       this.posts.splice(findPostIdx, 1);
     },
 
@@ -74,3 +74,25 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.index {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+.main__side-nav {
+  width: 30%;
+}
+
+.main {
+  width: 70%;
+}
+
+.main-title {
+  color: #fff;
+  font-size: x-large;
+  margin: 0 0 2rem 1rem;
+}
+</style>

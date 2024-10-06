@@ -3,7 +3,7 @@
         <div class="detail">
             <p class="detail-name">{{ post.user.name }}</p>
             <img class="detail-like" @click="handleToggleLike" :src="require('@/assets/images/heart.png')" alt="いいね" />
-            <p class="like-count">{{ postMessage.likes.length }}</p>
+            <p class="like-count">{{ post.likes.length }}</p>
             <img class="detail-delete" @click="emitDeletePost" :src="require('@/assets/images/cross.png')" alt="削除" />
             <img class="detail-link"
                 @click="goPostDetail"
@@ -47,3 +47,47 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.message {
+    width: 100%;
+    border: 0.1rem solid #fff;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.detail-name {
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+}
+
+.like-count {
+    color: #fff;
+}
+
+.detail-like,
+.detail-delete {
+    width: 2.5%;
+    margin: 0 1rem;
+}
+
+.detail-link {
+    width: 2.5%;
+    margin-left: 2rem;
+}
+
+.content {
+    margin: 1rem 0;
+}
+
+.content-text {
+    color: #fff;
+}
+</style>
